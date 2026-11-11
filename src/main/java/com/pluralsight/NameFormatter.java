@@ -35,4 +35,14 @@ public class NameFormatter {
 
         return fullName.toString();
     }
+
+    public static String format(String fullName) {
+        String[] nameParts = fullName.split(" ");
+
+        if (nameParts.length == 2) {
+            return format(nameParts[0], nameParts[1]);
+        }
+
+        return "";
+    }
 }
